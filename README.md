@@ -37,8 +37,14 @@ rails server
 
 ## Debugging
 
-1. `.../lib/sqlite3/sqlite3_native.bundle: [BUG] Segmentation fault`
-Fix this with running the following:
+### Segmentation fault
+
+```bash
+.../lib/sqlite3/sqlite3_native.bundle: [BUG] Segmentation fault
+```
+
+Fix it with running:  
+
 ```bash
 gem uninstall sqlite3
 gem install sqlite3
