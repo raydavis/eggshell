@@ -9,7 +9,7 @@ The pre-release of CalCentral
 * [Rails 3.2.8](http://rubyonrails.org/download)
 * [Bundler](http://gembundler.com/rails3.html)
 
-## Recommendation
+### Recommended
 
 * [Rvm](https://rvm.io/rvm/install/) - Ruby version managers
 
