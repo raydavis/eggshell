@@ -30,13 +30,7 @@ cd eggshell
 bundle install
 ```
 
-4. Install Zurb Foundation assets
-```bash
-rails g foundation:install
-rails g foundation:layout
-```
-
-5. Start the server
+4. Start the server
 ```bash
 rails server
 ```
