@@ -15,9 +15,9 @@ The pre-release of CalCentral
 
 ## Installation
 
-1. Clone this repository (or your own fork)
+1. Fork this repository, then:
 ```bash
-git clone git@github.com:ets-berkeley-edu/eggshell.git
+git clone git@github.com:[your_github_acct]/eggshell.git
 ```
 
 2. Go inside the `eggshell` repository
@@ -35,6 +35,12 @@ bundle install
 rails server
 ```
 
+Tip: You can use the shorthand:
+
+```bash
+rails s
+```
+
 ## Debugging
 
 ### Segmentation fault
@@ -43,7 +49,7 @@ rails server
 .../lib/sqlite3/sqlite3_native.bundle: [BUG] Segmentation fault
 ```
 
-Fix it with running:  
+Fix it with running:
 
 ```bash
 gem uninstall sqlite3
