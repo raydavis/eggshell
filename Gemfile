@@ -4,9 +4,9 @@ source 'https://rubygems.org'
 # https://github.com/rails/rails
 gem 'rails', '3.2.8'
 
-# SQLite3 database
-# https://github.com/luislavena/sqlite3-ruby
-gem 'sqlite3', '~> 1.3.6'
+# Postgresql adapter
+# This gem forwards to activerecord's default postgresql adapter
+gem 'activerecord-postgresql-adapter', '~> 0.0.1'
 
 # A JSON implementation as a Ruby extension in C
 # http://flori.github.com/json/
