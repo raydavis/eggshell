@@ -4,13 +4,10 @@ The pre-release of CalCentral
 
 ## Dependencies
 
-* [Ruby 1.9.3-p194](http://www.ruby-lang.org/en/)
+* [Ruby 1.9.3-p286](http://www.ruby-lang.org/en/)
 * [Rubygems](http://rubyforge.org/frs/?group_id=126)
 * [Rails 3.2.8](http://rubyonrails.org/download)
 * [Bundler](http://gembundler.com/rails3.html)
-
-### Recommended
-
 * [Rvm](https://rvm.io/rvm/install/) - Ruby version managers
 
 ## Installation
