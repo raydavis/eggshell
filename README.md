@@ -15,28 +15,40 @@ The pre-release of CalCentral
 
 ## Installation
 
-1. Fork this repository, then:
+1. Install postgres
+```bash
+brew update
+brew install postgresql
+initdb /usr/local/var/postgres
+```
+
+2. Start postgres, add the user and create the necessary dbs
+```bash
+pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+psql postgres
+create database eggshell;
+create user postgres;
+grant all privileges on database eggshell to postgres;
+create database eggshelltest;
+grant all privileges on database eggshelltest to postgres;
+```
+
+3. Fork this repository, then:
 ```bash
 git clone git@github.com:[your_github_acct]/eggshell.git
 ```
 
-2. Go inside the `eggshell` repository
+4. Go inside the `eggshell` repository
 ```bash
 cd eggshell
 ```
 
-3. Download the appropriate gems
+5. Download the appropriate gems
 ```bash
 bundle install
 ```
 
-4. Start the server
-```bash
-rails server
-```
-
-Tip: You can use the shorthand:
-
+6. Start the server
 ```bash
 rails s
 ```
