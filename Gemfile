@@ -39,3 +39,7 @@ group :assets do
   # https://github.com/lautis/uglifier
   gem 'uglifier', '~> 1.3.0'
 end
+
+group :development, :test do
+  gem 'rspec-rails', "~> 2.0"
+end
