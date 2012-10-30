@@ -26,7 +26,7 @@ psql postgres
 create database eggshell_development;
 create user eggshell_development;
 create user eggshell_development with password 'secret';
-grant all privileges on database eggshell to eggshell_development;
+grant all privileges on database eggshell_development to eggshell_development;
 create database eggshell_test;
 ```
 
