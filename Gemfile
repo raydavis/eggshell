@@ -33,6 +33,9 @@ group :assets do
 
   # CSS Framework - also includes Compass and SASS
   # https://github.com/zurb/foundation
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem "compass-rails", "~> 1.0.3"
   gem 'zurb-foundation', '~> 3.2.0'
 
   # Ruby wrapper for UglifyJS JavaScript compressor
