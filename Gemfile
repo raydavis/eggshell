@@ -15,6 +15,14 @@ gem 'pg', '~> 0.14.1'
 # http://flori.github.com/json/
 gem 'json', '~> 1.7.5'
 
+# "Keep env blue/clean"
+# https://rubygems.org/gems/rails_config
+gem "rails_config", "~> 0.3.1"
+
+# CAS Strategy for OmniAuth
+# https://rubygems.org/gems/omniauth-cas
+gem "omniauth-cas", "~> 0.0.7"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

@@ -1,2 +1,8 @@
 <h1>Bootstrap#index</h1>
+<h2>Welcome to eggshell!</h2>
+<% if user_signed_in? %>
+  <%= link_to('Logout', logout_path) %>
+<% else %>
+  <%= link_to('Login', login_path)  %>
+<% end %>
 <p>Find me in app/views/bootstrap/index.html.erb</p>
