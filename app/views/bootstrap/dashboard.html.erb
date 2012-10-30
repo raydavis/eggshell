@@ -1,0 +1,7 @@
+<h1>Bootstrap#dashboard</h1>
+<h2>Shell has been breached, by <%= current_user %>!</h2>
+<% if user_signed_in? %>
+  <%# Replace fugly templating with angular eventually %>
+  <%= link_to('Logout', logout_path) %>
+<% end %>
+<p>Find me in app/views/bootstrap/dashboard.html.erb</p>

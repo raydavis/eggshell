@@ -2,4 +2,4 @@ rvm:
   - "1.9.3"
   - "1.9.2"
 before_script:
-  - psql -c 'create database eggshell;' -U postgres
+  - psql -c 'create database eggshell_test;' -U postgres

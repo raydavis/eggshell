@@ -23,11 +23,11 @@ initdb /usr/local/var/postgres
 ```bash
 pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 psql postgres
-create database eggshell;
-create user postgres;
-grant all privileges on database eggshell to postgres;
-create database eggshelltest;
-grant all privileges on database eggshelltest to postgres;
+create database eggshell_development;
+create user eggshell_development;
+create user eggshell_development with password 'secret';
+grant all privileges on database eggshell to eggshell_development;
+create database eggshell_test;
 ```
 
 3. Fork this repository, then:
