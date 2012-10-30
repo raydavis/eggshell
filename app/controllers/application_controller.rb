@@ -12,7 +12,6 @@ class ApplicationController < ActionController::Base
     def current_user
       begin
         @current_user ||= session[:user_id]
-        p @current_user
       rescue Exception => e
         nil
       end
