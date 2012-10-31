@@ -48,6 +48,7 @@ bundle install
 ```
 
 6. Enable CAS
+
 Copy and paste the contents of `/config/settings.yml` to `/config/environments/development.local.yml` and update the settings.
 
 7. Start the server
@@ -78,6 +79,7 @@ rails s -e production
 ```bash
 bundle exec rake assets:clean
 rm public/index.html
+# remove other pages ...
 ```
 
 ### Segmentation fault
