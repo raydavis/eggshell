@@ -58,7 +58,7 @@ rails s
 
 ## Debugging
 
-### Running in production mode
+### Emulating production mode locally
 
 1. Precompile the assets: [(more info)](http://stackoverflow.com/questions/7275636/rails-3-1-0-actionviewtemplateerrror-application-css-isnt-precompiled)
 ```bash
@@ -75,7 +75,7 @@ config.serve_static_assets = true
 rails s -e production
 ```
 
-4. Remove the static assets and generated pages
+4. After testing, remove the static assets and generated pages
 ```bash
 bundle exec rake assets:clean
 rm public/index.html
