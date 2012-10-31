@@ -21,3 +21,6 @@
 
 # Ignore the SASS cache
 .sass-cache
+
+# Ignore compiled CSS files (these will be auto-generated on server start)
+app/assets/stylesheets/application.css
