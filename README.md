@@ -30,6 +30,9 @@ create database eggshell_production;
 create user eggshell_production with password 'secret';
 grant all privileges on database eggshell_production to eggshell_production;
 create database eggshell_test;
+create user postgres;
+grant all privileges on database eggshell_test to postgres;
+alter role postgres with createdb;  # DEVELOPER MACHINES ONLY
 ```
 
 3. Fork this repository, then:

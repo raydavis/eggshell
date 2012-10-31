@@ -21,6 +21,9 @@ production:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
+# If you use "postgresql" instead of "sqlite3", your password-free
+# username will also need to have permission to create and drop
+# databases. This is not a great idea in a shared environment.
 test:
   adapter: postgresql
   database: eggshell_test
