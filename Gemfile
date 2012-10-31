@@ -27,9 +27,9 @@ gem 'omniauth-cas', '~> 0.0.7'
 # in production environments by default.
 group :assets do
 
-  # Integrates RequireJS into the Rails 3 Asset Pipeline
-  # https://github.com/jwhitley/requirejs-rails
-  gem 'requirejs-rails', '~> 0.9.0'
+  # This library adds angularjs support to Rails applications
+  # https://github.com/ludicast/angular-rails
+  gem 'angular-rails', '~> 0.0.12'
 
   # CSS Framework - also includes Compass and SASS
   # https://github.com/zurb/foundation
