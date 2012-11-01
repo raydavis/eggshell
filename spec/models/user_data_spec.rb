@@ -1,4 +1,4 @@
-require File.expand_path(File.dirname(__FILE__) + '/../spec_helper.rb')
+require 'spec_helper'
 
 describe UserData do
   it "does not have an unknown user" do
