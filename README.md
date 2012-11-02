@@ -87,14 +87,15 @@ rm public/index.html
 
 ### Styleguide
 
+* Use an editor that supports [.editorconfig](http://editorconfig.org/#overview). Feel free to have a look at the [editor plug-ins](http://editorconfig.org/#download)
 * Use `data-ng-` instead of `ng-` or `ng:`
 
-:+1:
+:-1:
 ```html
 <ng:view>
 <span ng-bind="name"></span>
 ```
-:-1:
+:+1:
 ```html
 <div data-ng-view></div>
 <span ng-bind="name"></span>
