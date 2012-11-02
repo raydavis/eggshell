@@ -55,9 +55,10 @@ Eggshell::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
   root :to => 'bootstrap#index'
+
   # Sinatra API endpoints.
+  match '/fake/api/*url' => Api::Fake
   match '/api/canvas/*url' => Api::Canvas
-  match '/fake/api/canvas/*url' => Api::Canvas
   match '/api/user/*url' => Api::User
 
   match '/dashboard' => 'bootstrap#dashboard'
