@@ -7,12 +7,12 @@ module Api
 
     get "#{root}/status" do
       if session[:user_id]
-        return {
+        {
           :logged_in => true,
           :uid => session[:user_id]
         }.to_json
       else
-        return {
+        {
           :logged_in => false
         }.to_json
       end
@@ -20,7 +20,7 @@ module Api
 
     get "#{root}/:uid" do
       #eventually check db for existance of uid, etc.
-      return {
+      {
         :uid => params[:uid],
         :widget_data => {}
       }.to_json
