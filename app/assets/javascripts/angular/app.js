@@ -1,6 +1,6 @@
 (function() {
 
-  /*global angular, ErrorController, ProfileController, SplashController*/
+  /*global angular, DashboardController, ErrorController, ProfileController, SplashController*/
   'use strict';
 
   /**
@@ -18,6 +18,10 @@
       $routeProvider.when('/', {
         templateUrl: 'partials/splash.html',
         controller: SplashController
+      }).
+      when('/dashboard', {
+        templateUrl: 'partials/dashboard.html',
+        controller: DashboardController
       }).
       when('/profile', {
         templateUrl: 'partials/profile.html',
