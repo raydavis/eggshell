@@ -57,6 +57,7 @@ Eggshell::Application.routes.draw do
   root :to => 'bootstrap#index'
   # Sinatra API endpoints.
   match '/api/canvas/*url' => Api::Canvas
+  match '/fake/api/canvas/*url' => Api::Canvas
   match '/api/user/*url' => Api::User
 
   match '/dashboard' => 'bootstrap#dashboard'
