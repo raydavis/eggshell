@@ -85,6 +85,20 @@ rm public/index.html
 # remove other pages ...
 ```
 
+### Styleguide
+
+* Use `data-ng-` instead of `ng-` or `ng:`
+:+1:
+```html
+<ng:view>
+<span ng-bind="name"></span>
+```
+:-1:
+```html
+<div data-ng-view></div>
+<span ng-bind="name"></span>
+```
+
 ### Segmentation fault
 
 ```bash
