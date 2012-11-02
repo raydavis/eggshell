@@ -1,4 +1,4 @@
-#Eggshell
+#Eggshell [![Build Status](https://secure.travis-ci.org/ets-berkeley-edu/eggshell.png)](http://travis-ci.org/ets-berkeley-edu/eggshell)
 
 The pre-release of CalCentral
 
