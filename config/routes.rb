@@ -64,4 +64,7 @@ Eggshell::Application.routes.draw do
   # All the other paths should use the bootstrap page
   # We need this if we use html5mode=true
   match '/:page' => 'bootstrap#index'
+
+  # Sinatra API endpoints.
+  match '/api/canvas/*url' => Api::Canvas
 end

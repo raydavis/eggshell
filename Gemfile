@@ -23,6 +23,14 @@ gem 'rails_config', '~> 0.3.1'
 # https://rubygems.org/gems/omniauth-cas
 gem 'omniauth-cas', '~> 0.0.7'
 
+# Sinatra core gem
+# https://rubygems.org/gems/sinatra
+gem "sinatra", "~> 1.3.3"
+
+# Rest-Client: barebones rest-client proxy
+# https://rubygems.org/gems/rest-client
+gem "rest-client", "~> 1.6.7"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
