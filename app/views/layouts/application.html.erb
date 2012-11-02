@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<html lang="en" ng-app="calcentral">
 <head>
   <meta charset="utf-8" />
 
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+  <title ng-bind="title">Calcentral</title>
 
   <!-- Included CSS Files -->
   <%= stylesheet_link_tag "application" %>
@@ -21,23 +17,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% flash.each do |name, msg| %>
-    <% if msg.is_a?(String) %>
-      <%= content_tag :div, msg, :id => "flash_#{name}" %>
-    <% end %>
-  <% end %>
   <%= yield %>
 </body>
-
-<script>
-  var calcentral = calcentral || {};
-  <% if user_signed_in? %>
-  (function() {
-    calcentral.Data = calcentral.Data || {};
-    calcentral.Data.User = calcentral.Data.User || {};
-    calcentral.Data.User.user = calcentral.Data.User.user || {};
-    calcentral.Data.User.user.uid = <%= current_user %>
-  })();
-  <% end %>
-</script>
 </html>
