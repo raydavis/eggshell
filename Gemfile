@@ -55,3 +55,21 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'minitest-reporters'
 end
+
+group :development do
+  # Automatically reloads your browser when 'view' files are modified.
+  # https://github.com/guard/guard-livereload
+  gem 'guard-livereload', '~> 1.1.0'
+  gem 'rack-livereload', '~> 0.3.8'
+
+  # Polling is evil:
+  # https://github.com/guard/guard#readme
+  gem "rb-inotify", "~> 0.8.8", :require => false
+  gem "rb-fsevent", "~> 0.9.2", :require => false
+  gem "rb-fchange", "~> 0.0.6", :require => false
+
+  # Start/stop rails + guard all at once
+  # http://stackoverflow.com/questions/8293747/need-a-less-repetitve-way-to-start-rails-on-mac-for-noob
+  # https://github.com/ddollar/foreman
+  gem "foreman", "~> 0.60.2"
+end

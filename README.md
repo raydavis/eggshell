@@ -59,6 +59,14 @@ Copy and paste the contents of `/config/settings.yml` to `/config/environments/d
 rails s
 ```
 
+## LiveReload
+LiveReload can potentially be very helpful for frontend and backend development.
+  
+-  You will need a plugin for [chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) or [firefox](https://addons.mozilla.org/en-us/firefox/addon/livereload/).
+-  Run guard ```guard start``` from the project root to monitor changes on the fs, and start rails ```rails server```.  
+-  There's also a cheat using the packaged foreman routine ```forman start```, which will run both and stop both: [read more here](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html)
+
+
 ## Debugging
 
 ### Emulating production mode locally
