@@ -97,3 +97,14 @@ Fix it with running:
 gem uninstall sqlite3
 gem install sqlite3
 ```
+
+## API Endpoints:
+_(Not meant to be through at this point)_
+
+- __/api/user__:
+  - __logged_in__: true/false boolean
+  - __uid__: (if logged in, uid string)
+
+- __/api/user/{uid}__: Eventually return something useful (name, profile information)
+  - __uid__: <uid string>
+  - __widget_data__: <JSONObject>
