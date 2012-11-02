@@ -1,6 +1,20 @@
 @import "foundation/common/ratios";
 
-// Settings file containing Foundation defaults
+// Settings file containing Foundation defaults.
+// Copy overrides to top, leaving reference values untouched below.
+// TODO Should we remove the default foundation settings we're not using (e.g. pricing), or keep it pristine?
+
+$baseFontSize: 13px;
+$bodyFontFamily: Arial, Helvetica, sans-serif;
+$txtColor: #000000;
+$formSpacing: 7px;
+
+
+// ===========================
+// Do not edit below this line
+// ===========================
+
+
 
 // Grid Settings
 

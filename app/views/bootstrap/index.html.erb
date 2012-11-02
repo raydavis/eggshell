@@ -1,132 +1,20 @@
-<!-- Nav Bar -->
-
-  <div class="row">
-    <div class="twelve columns">
-      <ul class="nav-bar">
-        <li class="active"><a href="/">Splash</a></li>
-        <li><a href="/dashboard">Dashboard</a></li>
-        <li><a href="#">Link 3</a></li>
-        <li><a href="#">Link 4</a></li>
-      </ul>
-
-      <h1>CalCentral <small>Unified for all student-kind.</small>
-      <hr />
+<div class="cc-container-main" role="main">
+    <div class="cc-page-index-welcome cc-page-index-welcome1">
+        <h3><strong>Unifying</strong> the online experience at <strong>UC Berkeley!</strong></h3>
+        <p><strong>CalCentral</strong> is a new resource for the <strong>UC Berkeley community</strong>.</p>
     </div>
-  </div>
-
-  <!-- End Nav -->
-
-
-  <!-- Main Page Content and Sidebar -->
-
-  <div class="row">
-
-    <!-- Main Blog Content -->
-    <div class="nine columns" role="content">
-
-      <article>
-
-        <h3><a href="#">Welcome to CalSimple</a></h3>
-
-        <h6>
-        <% if user_signed_in? %>
-          <%= link_to "Log out", logout_path, :class => 'radius button' -%>
-        <% else %>
-          <%= link_to "Log in", login_path, :class => 'radius button' -%>
-        <% end %>
-        </h6>
-
-        <div class="row">
-          <div class="six columns">
-
-            <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.</p>
-            <p>Boudin aliqua adipisicing rump corned beef. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-          </div>
-          <div class="six columns">
-            <img src="http://placehold.it/400x240&text=[img]" />
-          </div>
-        </div>
-
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-
-      </article>
-
-      <hr />
-
-      <article>
-
-        <h3><a href="#">Blog Post Title</a></h3>
-        <h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
-
-        <div class="row">
-          <div class="six columns">
-            <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.</p>
-            <p>Boudin aliqua adipisicing rump corned beef. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-          </div>
-          <div class="six columns">
-            <img src="http://placehold.it/400x240&text=[img]" />
-          </div>
-        </div>
-
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-
-      </article>
-
+    <div class="cc-page-index-welcome cc-page-index-welcome2">
+        <h3>CalCentral: Pilot Release</h3>
+        <p>Welcome to the all-new pilot release of <strong>CalCentral</strong>. As we improve this site, you may notice changes to some existing features, or new capabilities being added. This is all part of the development process, so stay tuned.</p>
+        <p><strong>In this release, students, staff and faculty can:</strong></p>
+        <ul>
+            <li>Quickly access upcoming events in bCal</li>
+            <li>Find classes and groups in bSpace and Canvas</li>
+            <li>Keep tabs on classroom assignments</li>
+            <li>View your Google task list</li>
+            <li>Stay informed with campus announcements</li>
+            <li>Browse class listings in UC Berkeley departments</li>
+        </ul>
+        <p class="cc-page-index-welcome2-handshake"><span class="cc-page-index-welcome2-herefromyou">We want to hear from you!</span><br><a href="http://ets.berkeley.edu/calcentral-feedback">Tell us what you think</a>.</p>
     </div>
-
-    <!-- End Main Content -->
-
-
-    <!-- Sidebar -->
-
-    <aside class="three columns">
-
-      <h5>Categories</h5>
-      <ul class="side-nav">
-        <li><a href="#">News</a></li>
-        <li><a href="#">Code</a></li>
-        <li><a href="#">Design</a></li>
-        <li><a href="#">Fun</a></li>
-        <li><a href="#">Weasels</a></li>
-      </ul>
-
-      <div class="panel">
-        <h5>Featured</h5>
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
-        <a href="#">Read More &rarr;</a>
-      </div>
-
-    </aside>
-
-    <!-- End Sidebar -->
-  </div>
-
-  <!-- End Main Content and Sidebar -->
-
-
-  <!-- Footer -->
-
-  <footer class="row">
-    <div class="twelve columns">
-      <hr />
-      <div class="row">
-        <div class="six columns">
-          <p>&copy; Copyright no one at all. Go to town.</p>
-        </div>
-        <div class="six columns">
-          <ul class="link-list right">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- End Footer -->
+</div>
