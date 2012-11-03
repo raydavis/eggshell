@@ -60,11 +60,11 @@ rails s
 ```
 
 ## LiveReload
-LiveReload can potentially be very helpful for frontend and backend development.
-  
--  You will need a plugin for [chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) or [firefox](https://addons.mozilla.org/en-us/firefox/addon/livereload/).
--  Run guard ```guard start``` from the project root to monitor changes on the fs, and start rails ```rails server```.  
--  There's also a cheat using the packaged foreman routine ```forman start```, which will run both and stop both: [read more here](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html)
+
+See code changes happening live in the browser.
+LiveReload can potentially be very helpful for front-end and back-end development.
+
+- Run `foreman start` in the terminal, it will run both the rails server and guard. [Read more here](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html)
 
 
 ## Debugging
@@ -123,7 +123,7 @@ gem install sqlite3
 ```
 
 ## API Endpoints:
-_(Not meant to be through at this point)_
+_(Not meant to be thorough at this point)_
 
 - __/api/user__:
   - __logged_in__: true/false boolean

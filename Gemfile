@@ -64,12 +64,12 @@ group :development do
 
   # Polling is evil:
   # https://github.com/guard/guard#readme
-  gem "rb-inotify", "~> 0.8.8", :require => false
-  gem "rb-fsevent", "~> 0.9.2", :require => false
-  gem "rb-fchange", "~> 0.0.6", :require => false
+  gem 'rb-inotify', '~> 0.8.8', :require => false
+  gem 'rb-fsevent', '~> 0.9.2', :require => false
+  gem 'rb-fchange', '~> 0.0.6', :require => false
 
   # Start/stop rails + guard all at once
   # http://stackoverflow.com/questions/8293747/need-a-less-repetitve-way-to-start-rails-on-mac-for-noob
   # https://github.com/ddollar/foreman
-  gem "foreman", "~> 0.60.2"
+  gem 'foreman', '~> 0.60.2'
 end
