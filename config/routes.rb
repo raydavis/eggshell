@@ -70,5 +70,5 @@ Eggshell::Application.routes.draw do
 
   # All the other paths should use the bootstrap page
   # We need this if we use html5mode=true
-  match '/:page' => 'bootstrap#index'
+  match '/*url' => 'bootstrap#index'
 end
