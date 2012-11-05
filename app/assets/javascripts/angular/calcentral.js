@@ -16,21 +16,21 @@
 
       // List all the routes
       $routeProvider.when('/', {
-        templateUrl: 'partials/splash.html',
+        templateUrl: 'templates/splash.html',
         controller: SplashController
       }).
       when('/dashboard', {
-        templateUrl: 'partials/dashboard.html',
+        templateUrl: 'templates/dashboard.html',
         controller: DashboardController
       }).
       when('/profile', {
-        templateUrl: 'partials/profile.html',
+        templateUrl: 'templates/profile.html',
         controller: ProfileController
       }).
 
       // Redirect to a 404 page
       otherwise({
-        templateUrl: 'partials/404.html',
+        templateUrl: 'templates/404.html',
         controller: ErrorController
       });
 
