@@ -1,11 +1,18 @@
+<%
+  puts 'in database.yml'
+  p Settings
+%>
+
 development:
   adapter: postgresql
   database: eggshell_development
   encoding: unicode
   pool: 5
   timeout: 5000
-  username: eggshell_development
-  password: secret
+#  username: eggshell_development
+#  password: secret
+  username: <%= Settings.postgres_username %>
+  password: <%= Settings.postgres_password %>
   host: localhost
 
 production:

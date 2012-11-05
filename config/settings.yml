@@ -1,2 +1,4 @@
 cas_server: 'localhost:1234/cas'
 cas_logout_url: 'https://localhost:4321/cas/logout'
+postgres_username: eggshell_development
+postgres_password: secret
