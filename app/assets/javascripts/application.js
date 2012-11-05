@@ -11,5 +11,6 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require angular.min
+//= require ./angular/calcentral
 //= require_directory ./angular/controllers
 //= require_directory ./angular
