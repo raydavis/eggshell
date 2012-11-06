@@ -1,12 +1,11 @@
-/**
- * Error controller
- */
-function ErrorController($rootScope, $scope, $http) {
-
+(function() {
+  /*global calcentral*/
   'use strict';
 
-  $rootScope.title = 'Error | Calcentral';
-
-}
-
-//ErrorController.$inject = ['$rootScope', '$scope', '$http'];
+  /**
+   * Error controller
+   */
+  calcentral.controller('ErrorController', function ErrorController($rootScope, $scope, $http) {
+    $rootScope.title = 'Error | Calcentral';
+  });
+})();

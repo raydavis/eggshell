@@ -1,14 +1,14 @@
-/**
- * User controller
- */
-function UserController($http, $scope) {
-
+(function() {
+  /*global calcentral*/
   'use strict';
 
-  $http.get('dummy/user.json').success(function(data) {
-    $scope.user = data;
+  /**
+   * User controller
+   */
+  calcentral.controller('UserController', function UserController($http, $scope) {
+    $http.get('dummy/user.json').success(function(data) {
+      $scope.user = data;
+    });
+
   });
-
-}
-
-//UserController.$inject = ['$scope', '$http'];
+})();

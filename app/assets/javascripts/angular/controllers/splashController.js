@@ -1,12 +1,11 @@
-/**
- * Splash controller
- */
-function SplashController($rootScope, $scope, $http) {
-
+(function() {
+  /*global calcentral*/
   'use strict';
 
-  $rootScope.title = 'Home | Calcentral';
-
-}
-
-//SplashController.$inject = ['$rootScope', '$scope', '$http'];
+  /**
+   * Splash controller
+   */
+  calcentral.controller('SplashController', function SplashController($rootScope, $scope, $http) {
+    $rootScope.title = 'Home | Calcentral';
+  });
+})();

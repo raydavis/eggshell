@@ -1,12 +1,12 @@
-/**
- * Dashboard controller
- */
-function DashboardController($rootScope, $scope, $http) {
-
+(function() {
+  /*global calcentral*/
   'use strict';
 
-  $rootScope.title = 'Dashboard | Calcentral';
+  /**
+   * Dashboard controller
+   */
+  calcentral.controller('DashboardController', function DashboardController($rootScope, $scope, $http) {
+    $rootScope.title = 'Dashboard | Calcentral';
+  });
+})();
 
-}
-
-// DashboardController.$inject = ['$rootScope', '$scope', '$http'];
