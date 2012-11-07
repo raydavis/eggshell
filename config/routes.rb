@@ -59,7 +59,7 @@ Eggshell::Application.routes.draw do
   # Sinatra API endpoints.
   match '/fake/api/*url' => Api::Fake
   match '/api/canvas/*url' => Api::Canvas
-  match '/api/user/*url' => Api::User
+  match '/api/user/*url' => Api::UserApi
 
   match '/auth/cas/callback' => 'sessions#lookup'
   match '/auth/failure' => 'sessions#failure'
