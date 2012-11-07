@@ -42,3 +42,9 @@ campusdb:
   password: <%= ENV['ORACLE_PASSWORD'] %>
   pool: 5
   timeout: 5000
+
+campush2db:
+  adapter: jdbch2
+  url: jdbc:h2:mem:h2CampusDataSource;DB_CLOSE_DELAY=-1;MODE=Oracle
+  username: sa
+  password: sa

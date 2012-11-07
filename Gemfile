@@ -10,6 +10,9 @@ gem "activerecord-jdbcpostgresql-adapter", "~> 1.2.2.1"
 # Oracle adapter
 gem "activerecord-oracle_enhanced-adapter", "~> 1.4.1"
 
+# H2 adapter
+gem "activerecord-jdbch2-adapter", "~> 1.2.2.1"
+
 # A JSON implementation as a Ruby extension in C
 # http://flori.github.com/json/
 gem 'json', '~> 1.7.5'
