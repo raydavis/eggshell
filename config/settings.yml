@@ -3,3 +3,6 @@ cas_logout_url: 'https://localhost:4321/cas/logout'
 canvas_proxy:
   admin_access_token: "someMumboJumbo"
   canvas_root: "http://localhost:12345"
+  fake: false
+campus_data:
+  data_source: "campusdb"
