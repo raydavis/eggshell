@@ -33,3 +33,11 @@ test:
   # Travis.ci needs username postgress and no password
   # http://about.travis-ci.org/docs/user/database-setup/#postgresql
   username: postgres
+
+campusdb:
+  adapter: oracle_enhanced
+  database: <%= ENV['ORACLE_DATABASE'] %>
+  username: <%= ENV['ORACLE_USER'] %>
+  password: <%= ENV['ORACLE_PASSWORD'] %>
+  pool: 5
+  timeout: 5000

@@ -20,4 +20,6 @@ ActiveRecord::Schema.define(:version => 0) do
     t.datetime "updated_at",     :null => false
   end
 
+  add_index "user_data", ["uid"], :name => "index_user_data_on_uid"
+
 end
