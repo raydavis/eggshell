@@ -26,7 +26,7 @@ body > header > h1 {
 /* Container */
 .cc-container-main {
 	background-color: #FFFFFF;
-	padding: 20px 10px;
+	padding: 0 10px;
 }
 
 /* Launcher */
@@ -113,6 +113,7 @@ body > footer a {
 	height: 16px;
 	width: 16px;
 }
+
 .cc-icon-alert {
 	background-image: url(<%= asset_path 'icon_alert_16x16.png' %>);
 
@@ -129,6 +130,13 @@ body > footer a {
 	height: 24px;
 	width: 24px;
 }
+
+.cc-container-widget .cc-widget-list-icon-big {
+  background-color: transparent;
+  background-position: 0 2px;
+  background-repeat: no-repeat;
+}
+
 .cc-icon-big-academics {
 	background-image: url(<%= asset_path 'icon_academics_24x24.png' %>);
 }
@@ -234,7 +242,90 @@ body > footer a {
 	margin-top: 20px;
 }
 
+/* Widgets */
 
+.cc-container-widget .cc-widget-list {
+  margin: 0;
+  max-height: 200px;
+  overflow: auto;
+  padding: 0;
+}
+
+.cc-container-widget .cc-widget-list li {
+  border-bottom: 1px dotted #CACACA;
+  list-style-type: none;
+}
+
+.cc-widget-list-icon {
+  background-color: transparent;
+  background-position: 0 4px;
+  background-repeat: no-repeat;
+}
+
+.cc-widget-title {
+  border-bottom: 1px solid #999;
+  color: #474747;
+}
+
+.cc-widget-title h2 {
+  margin: 4px 0;
+  padding: 2px 0;
+  font-size: 16px;
+}
+
+.cc-widget-title-small {
+  margin-top: 3px;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.cc-widget-list-subtitle {
+  font-size: 11px;
+  line-height: 8px;
+  margin-left: 21px;
+  padding-bottom: 7px;
+}
+
+.cc-widget-section-label {
+  clear: both;
+  color: #232323;
+  font-size: 1.2em;
+  margin-top: 5px;
+}
+
+.cc-container-widget {
+  float: left;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 100%;
+}
+
+.cc-widget-main {
+  padding: 0 17px;
+}
+
+.cc-container-widgets {
+  margin: 0 15px;
+  overflow: hidden;
+}
+
+.cc-container-widget .cc-widget-list li:last-child {
+  border-bottom: none;
+}
+.cc-container-widget .cc-widget-list li a {
+  display: block;
+  padding: 4px 0 3px 21px;
+}
+.cc-container-widget .cc-widget-list li:last-child {
+  border-bottom: none;
+}
+
+.cc-container-widget .cc-widget-list {
+  margin: 0;
+  max-height: 200px;
+  overflow: auto;
+  padding: 0;
+}
 
 /* ==|== non-semantic helper classes ========================================
 	 Please define your styles before this section.
