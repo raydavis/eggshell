@@ -5,8 +5,8 @@
   /**
    * Dashboard controller
    */
-  calcentral.controller('DashboardController', function DashboardController($rootScope, $scope, $http) {
+  calcentral.controller('DashboardController', ['$rootScope', function($rootScope) {
     $rootScope.title = 'Dashboard | Calcentral';
-  });
-})();
+  }]);
 
+})();

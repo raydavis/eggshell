@@ -1,4 +1,4 @@
-(function(scope) {
+(function(window) {
 
   /*global angular*/
   'use strict';
@@ -37,5 +37,5 @@
   );
 
   // Hello calcentral
-  scope.calcentral = calcentral;
+  window.calcentral = calcentral;
 })(window);
