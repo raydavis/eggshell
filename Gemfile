@@ -57,6 +57,10 @@ group :development, :test do
 end
 
 group :development do
+  # Code coverage for Ruby 1.9 with a powerful configuration library and automatic merging of coverage across test suites
+  # https://rubygems.org/gems/simplecov
+  gem "simplecov", "~> 0.7.1"
+
   # Automatically reloads your browser when 'view' files are modified.
   # https://github.com/guard/guard-livereload
   gem 'guard-livereload', '~> 1.1.0'
