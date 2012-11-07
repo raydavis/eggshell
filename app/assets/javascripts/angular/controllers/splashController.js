@@ -5,7 +5,8 @@
   /**
    * Splash controller
    */
-  calcentral.controller('SplashController', function SplashController($rootScope, $scope, $http) {
+  calcentral.controller('SplashController', ['$rootScope', function($rootScope) {
     $rootScope.title = 'Home | Calcentral';
-  });
+  }]);
+
 })();

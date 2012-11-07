@@ -69,13 +69,13 @@ Copy and paste the contents of `/config/settings.yml` to `/config/environments/d
 rails s
 ```
 
-## LiveReload
+## LiveReload & Testing
 
-See code changes happening live in the browser.
-LiveReload can potentially be very helpful for front-end and back-end development.
+See code changes happening live in the browser and look at the testing
 
-- Run `foreman start` in the terminal, it will run both the rails server and guard. [Read more here](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html)
+- Run `foreman start` in the terminal, it will run the rails server, expose the test and guard. [Read more about foreman](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html)
 
+- When you want to see the actual tests, go to http://localhost:8888/
 
 ## Debugging
 

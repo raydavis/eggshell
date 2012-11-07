@@ -5,8 +5,9 @@
   /**
    * Profile controller
    */
-  calcentral.controller('ProfileController', function ProfileController($rootScope, $scope, $http) {
+  calcentral.controller('ProfileController', ['$rootScope', function($rootScope) {
     $rootScope.title = 'Profile | Calcentral';
-  });
+  }]);
+
 })();
 

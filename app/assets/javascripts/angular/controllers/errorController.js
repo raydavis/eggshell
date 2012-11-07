@@ -5,7 +5,8 @@
   /**
    * Error controller
    */
-  calcentral.controller('ErrorController', function ErrorController($rootScope, $scope, $http) {
+  calcentral.controller('ErrorController', ['$rootScope', function($rootScope) {
     $rootScope.title = 'Error | Calcentral';
-  });
+  }]);
+
 })();
