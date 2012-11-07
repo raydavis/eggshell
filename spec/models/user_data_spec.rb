@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper.rb')
 
 describe UserData do
-  browser = Rack::Test::Session.new(Rack::MockSession.new(Api::User))
+  browser = Rack::Test::Session.new(Rack::MockSession.new(Api::UserApi))
 
   it "does not have an unknown user" do
     lambda {

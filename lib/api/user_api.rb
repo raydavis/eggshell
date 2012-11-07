@@ -1,7 +1,7 @@
 require 'json'
 
 module Api
-  class User < Sinatra::Base
+  class UserApi < Sinatra::Base
     root = "/api/user"
 
     get "#{root}/status" do
