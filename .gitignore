@@ -27,3 +27,6 @@ app/assets/stylesheets/application.css
 
 # Ignore the coverage directory (for checking in, otherwise useful)
 /coverage
+
+# Ignore Oracle driver
+ojdbc6.jar
