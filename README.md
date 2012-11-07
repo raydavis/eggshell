@@ -43,11 +43,16 @@ git clone git@github.com:[your_github_acct]/eggshell.git
 4. Go inside the `eggshell` repository
 ```bash
 cd eggshell
+  -- Answer "yes" if it asks you to trust a new .rvmrc file.
 ```
 
 5. Install jruby
 ```bash
+rvm get head
 rvm install jruby-1.7.0
+cd ..
+cd eggshell
+  -- Answer "yes" again if it asks you to trust a new .rvmrc file.
 ```
 
 6. Download the appropriate gems
@@ -143,12 +148,12 @@ _(Not meant to be thorough at this point)_
 * Download ojdbc6.jar from http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html
 * Save ojdbc6.jar in eggshell/lib
 
-* Before connecting to campusdb_development, set the secret variables:
+* Before connecting to campusdb_development, set the secret variables (note the SINGLE quotes):
 
 ```bash
-export ORACLE_USER=yer_username
-export ORACLE_PASSWORD=yer_password
-export ORACLE_DATABASE=yer_host:yer_port/yer_sid.berkeley.edu
+export ORACLE_USER='yer_username'
+export ORACLE_PASSWORD='yer_password'
+export ORACLE_DATABASE='yer_host:yer_port/yer_sid.berkeley.edu'
 ```
 
 * And test:
