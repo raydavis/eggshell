@@ -64,7 +64,22 @@ bundle install
 
 Copy and paste the contents of `/config/settings.yml` to `/config/environments/development.local.yml` and update the settings.
 
-8. Start the server
+
+8. Install JDBC driver (for Oracle connection)
+
+* Download ojdbc6.jar from http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html
+* Copy ojdbc6.jar to eggshell/lib
+
+If you have permission to connect to campusdb_development, set the secret variables (note the SINGLE quotes):
+
+```bash
+export ORACLE_USER='yer_username'
+export ORACLE_PASSWORD='yer_password'
+export ORACLE_DATABASE='yer_host:yer_port/yer_sid.berkeley.edu'
+```
+
+
+9. Start the server
 ```bash
 rails s
 ```
@@ -142,19 +157,6 @@ _(Not meant to be thorough at this point)_
 - __/api/user/{uid}__: Eventually return something useful (name, profile information)
   - __uid__: <uid string>
   - __widget_data__: <JSONObject>
-
-## Oracle
-
-* Download ojdbc6.jar from http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html
-* Save ojdbc6.jar in eggshell/lib
-
-* Before connecting to campusdb_development, set the secret variables (note the SINGLE quotes):
-
-```bash
-export ORACLE_USER='yer_username'
-export ORACLE_PASSWORD='yer_password'
-export ORACLE_DATABASE='yer_host:yer_port/yer_sid.berkeley.edu'
-```
 
 * And test:
 ```bash
