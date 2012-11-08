@@ -82,6 +82,11 @@ export ORACLE_DATABASE='yer_host:yer_port/yer_sid.berkeley.edu'
 rails s
 ```
 
+10. Optional: Make JRuby faster. Run this or put in your .bashrc:
+```bash
+export JRUBY_OPTS="-Xcext.enabled=true -J-d32 -J-client -X-C"
+```
+
 ## LiveReload & Testing
 
 See code changes happening live in the browser and look at the testing
