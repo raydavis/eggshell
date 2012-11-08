@@ -64,7 +64,14 @@ bundle install
 
 Copy and paste the contents of `/config/settings.yml` to `/config/environments/development.local.yml` and update the settings.
 
-8. Start the server
+
+8. Install JDBC driver (for Oracle connection)
+
+* Download ojdbc6.jar from http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html
+* Copy ojdbc6.jar to eggshell/lib
+
+
+9. Start the server
 ```bash
 rails s
 ```
@@ -143,10 +150,7 @@ _(Not meant to be thorough at this point)_
   - __uid__: <uid string>
   - __widget_data__: <JSONObject>
 
-## Oracle
-
-* Download ojdbc6.jar from http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html
-* Save ojdbc6.jar in eggshell/lib
+## Oracle connection settings
 
 * Before connecting to campusdb_development, set the secret variables (note the SINGLE quotes):
 
