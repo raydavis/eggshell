@@ -12,4 +12,6 @@
 # The variable PROJECT_JRUBY_OPTS requires the following to be run in shell:
 #    chmod +x ${rvm_path}/hooks/after_use_jruby_opts
 
+export JAVA_OPTS='-d32 -client'
+export JRUBY_OPTS='-X-C'
 rvm --create use jruby-1.7.0@eggshell
