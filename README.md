@@ -61,9 +61,7 @@ bundle install
 ```
 
 7. Enable CAS
-
 Copy and paste the contents of `/config/settings.yml` to `/config/environments/development.local.yml` and update the settings.
-
 
 8. Install JDBC driver (for Oracle connection)
 
