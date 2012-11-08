@@ -38,4 +38,13 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  # Nicer way to hide breaking tests.
+  config.filter_run_excluding :ignore => true
+
+  # Exclusion filter: If a test is marked with :testext and true, it will be skipped
+  # unless tests were started with the testext environment
+  unless ENV["RAILS_ENV"] == 'testext'
+    config.filter_run_excluding :testext => true
+  end
 end

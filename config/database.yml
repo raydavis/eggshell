@@ -34,17 +34,22 @@ test:
   # http://about.travis-ci.org/docs/user/database-setup/#postgresql
   username: postgres
 
-campusdb:
-  adapter: jdbc
-  driver: oracle.jdbc.OracleDriver
-  url: jdbc:oracle:thin:@<%= ENV['ORACLE_DATABASE'] %>
-  username: <%= ENV['ORACLE_USER'] %>
-  password: <%= ENV['ORACLE_PASSWORD'] %>
+testext:
+  adapter: postgresql
+  database: eggshell_test
+  encoding: unicode
   pool: 5
   timeout: 5000
+  username: postgres
 
-campush2db:
-  adapter: jdbch2
-  url: jdbc:h2:mem:h2CampusDataSource;DB_CLOSE_DELAY=-1;MODE=Oracle
-  username: sa
-  password: sa
+# The places where these settings are filled out are settings.yml, testext.yml, and production.yml
+# You should only be filling in custom values and secrets for testext.local.yml and production.local.yml
+campusdb:
+  adapter: <%= Settings.campusdb.adapter %>
+  driver: <%=Settings.campusdb.driver %>
+  url: <%=Settings.campusdb.url %>
+  username: <%=Settings.campusdb.username %>
+  password: <%=Settings.campusdb.password %>
+  pool: <%=Settings.campusdb.pool %>
+  timeout: <%=Settings.campusdb.timeout %>
+

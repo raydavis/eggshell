@@ -1,4 +1,4 @@
-require File.expand_path(File.dirname(__FILE__) + '/../spec_helper.rb')
+require "spec_helper"
 
 describe UserData do
   browser = Rack::Test::Session.new(Rack::MockSession.new(Api::UserApi))

@@ -1,5 +1,4 @@
 require "spec_helper"
-require "campus_data"
 
 describe CampusData do
   it "should find Oliver" do

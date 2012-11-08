@@ -8,7 +8,10 @@ gem 'rails', '3.2.8'
 gem "activerecord-jdbcpostgresql-adapter", "~> 1.2.2.1"
 
 # Oracle adapter
-gem "activerecord-oracle_enhanced-adapter", "~> 1.4.1"
+# Purposely excluding this for test environments since folks have to install ojdbc6
+group :development, :testext, :production do
+  gem "activerecord-oracle_enhanced-adapter", "~> 1.4.1"
+end
 
 # H2 adapter
 gem "activerecord-jdbch2-adapter", "~> 1.2.2.1"
@@ -53,20 +56,20 @@ group :assets do
   gem 'uglifier', '~> 1.3.0'
 end
 
-group :development, :test do
+group :development, :test , :testext do
   gem 'rspec-rails', '~> 2.0'
   gem 'minitest-reporters'
 
   # Test our JavaScript code.
   # https://github.com/pivotal/jasmine-gem
   gem 'jasmine', '~> 1.2.1'
+
+  # Code coverage for Ruby 1.9 with a powerful configuration library and automatic merging of coverage across test suites
+  # https://rubygems.org/gems/simplecov
+  gem "simplecov", "~> 0.7.1", :require => false
 end
 
 group :development do
-  # Code coverage for Ruby 1.9 with a powerful configuration library and automatic merging of coverage across test suites
-  # https://rubygems.org/gems/simplecov
-  gem "simplecov", "~> 0.7.1"
-
   # Automatically reloads your browser when 'view' files are modified.
   # https://github.com/guard/guard-livereload
   gem 'guard-livereload', '~> 1.1.0'
