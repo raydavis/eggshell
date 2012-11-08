@@ -4,5 +4,9 @@ canvas_proxy:
   admin_access_token: "someMumboJumbo"
   canvas_root: "http://localhost:12345"
   fake: false
-campus_data:
-  data_source: "campusdb"
+
+campusdb:
+  adapter: jdbch2
+  url: jdbc:h2:mem:h2CampusDataSource;DB_CLOSE_DELAY=-1;MODE=Oracle
+  username: sa
+  password: sa
