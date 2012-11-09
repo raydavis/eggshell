@@ -18,9 +18,14 @@ module Api
     end
 
     get "#{root}/:uid" do
-      #eventually check db for existance of uid, etc.
+      user = CampusData.get_person_attributes(params[:uid])
+      if user.nil?
+        empty_response = ""
+      end
       {
         :uid => params[:uid],
+        :first_name => empty_response || user["first_name"],
+        :last_name => empty_response || user["last_name"],
         :widget_data => {}
       }.to_json
     end
