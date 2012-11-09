@@ -85,4 +85,8 @@ group :development do
   # http://stackoverflow.com/questions/8293747/need-a-less-repetitve-way-to-start-rails-on-mac-for-noob
   # https://github.com/ddollar/foreman
   gem 'foreman', '~> 0.60.2'
+
+  # C-Extension dependency of foreman
+  # https://github.com/rtomayko/posix-spawn
+  gem "posix-spawn", "~> 0.3.6"
 end
