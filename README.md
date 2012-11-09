@@ -150,13 +150,13 @@ If you use VPN, set the `connect to` to `ucbvpn-2-external.Berkeley.EDU` and use
 ## API Endpoints:
 
 ```
-/api/user:
-  logged_in: true/false boolean
-  uid: (if logged in, uid string)
+/api/user/status:
+  isLoggedIn: <boolean>
+  preferredName: <string if exists else "">
+  uid: <string uid if logged in>
+  widgetData: <object>
 
 /api/user/{uid}: Eventually return something useful (name, profile information)
-  first_name: <string if exists else "">
-  last_name: <string if exists else "">
+  preferredName: <string if exists else "">
   uid: <uid string>
-  widget_data: <JSONObject>
 ```
