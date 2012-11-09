@@ -5,11 +5,11 @@ module Api
     root = "/api/user"
 
     get "#{root}/status" do
-      user = User.new(session[:uid])
+      user = User.new(session[:user_id])
       if session[:user_id]
         {
           :isLoggedIn => true,
-          :preferredName => user.preferred_name,
+          :preferredName => user.preferred_name || "",
           :uid => session[:user_id],
           :widgetData => {}
         }.to_json
