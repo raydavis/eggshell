@@ -1,0 +1,94 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ucberkeley.instructure.com/api/v1/courses
+    body:
+      encoding: ASCII-8BIT
+      string: !binary ""
+    headers:
+      accept:
+      - ! '*/*; q=0.5, application/xml'
+      accept-encoding:
+      - gzip, deflate
+      authorization:
+      - Bearer U2oidGhxphs6TRHyh8b2V6OAD197fDZu96mlUUC4vntBO9rGiANcIYqP7mEn6h0I
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "Y2FjaGUtY29udHJvbA==":
+      - !binary |-
+        cHJpdmF0ZSwgbWF4LWFnZT0wLCBtdXN0LXJldmFsaWRhdGU=
+      !binary "Y29udGVudC1lbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        RnJpLCAwOSBOb3YgMjAxMiAxOToyNjoyMyBHTVQ=
+      !binary "ZXRhZw==":
+      - !binary |-
+        IjgwZWI3MjMzYTE0YWI4MmEzMGIyMDkxNmUwNzViODAxIg==
+      !binary "cDNw":
+      - !binary |-
+        Q1A9Ik5vbmUsIHNlZSBodHRwOi8vd3d3Lmluc3RydWN0dXJlLmNvbS9wcml2
+        YWN5LXBvbGljeSI=
+      !binary "c2VydmVy":
+      - !binary |-
+        QXBhY2hl
+      !binary "c2V0LWNvb2tpZQ==":
+      - !binary |-
+        Y2FudmFzX3Nlc3Npb249ZW9kSDFvOWxINmtuUnd4VUxsdnROUS5zakhwWFZX
+        NXJVUUMtQVVPSE5ZbXJYemsyc2dWcFFoOUlKNlJaek1uM0xYQk5qR2VQc0tr
+        MjhtRExaWUdLQzRJS1otSVpETDY0MU1yYkhhdG9FSERGQS5xaGhYc3ozTlV1
+        dDAzWExIQVpka3NYb0F3TVkuVUoxWTN3OyBwYXRoPS87IHNlY3VyZTsgSHR0
+        cE9ubHk=
+      !binary "c3RhdHVz":
+      - !binary |-
+        MjAw
+      !binary "dmFyeQ==":
+      - !binary |-
+        QWNjZXB0LUVuY29kaW5n
+      !binary "eC1jYW52YXMtdXNlci1pZA==":
+      - !binary |-
+        MTAwMDAwMDMwNzU5MTQ=
+      !binary "eC1yZXF1ZXN0LWNvbnRleHQtaWQ=":
+      - !binary |-
+        NDU1OTBmODAtMGNkMS0wMTMwLWVkY2UtMDJlMzNhYjRmZWJh
+      !binary "eC1ydW50aW1l":
+      - !binary |-
+        NjQz
+      !binary "eC11YS1jb21wYXRpYmxl":
+      - !binary |-
+        SUU9ZWRnZSxjaHJvbWU9MQ==
+      !binary "Y29udGVudC1sZW5ndGg=":
+      - !binary |-
+        NDY5
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA7WTXW/aMBSG/wrydQA7CcmSu7QDBkQVAy5Gqypy7EMJdeIs
+        dgYp4r/PAXWqJlVD6yb5wn5tn4/ntR+OiDIm60InGUdhgG3XsZDKVGLESsFZ
+        LWohjKhppROqX9eMCig4rVB4RBlTKERbrUsV9vs1S6F6BgFNLyuUrmqm6wp6
+        TOb9DQBX/derZnbJsmRynH7ZPKmvwc0uHa/xPb+1RbOiOYFvy4M/ih02O2jo
+        tYlOFuKwobXQyY8M9iZxGxVZqKA5mNUlJjHCNuOQbLKCiuSpohxMkRsqFFio
+        bcv3Bo4dWAiKSgqRQ6HN/sMR6aZsw2igbAsVOj22R/jbzi9FM8nfpjtZf8MS
+        2ZjYXYK7+NOKeKHth8TtYj/EGP1bxLcvd9HsMNpO40jqJi8/72b+M5dDf18s
+        5mUTNTuy1lN3/w7iXPJaGIC/KC9AaVlRncmiE2cazNRUcA10H3vvQle65kY7
+        w/xd+oMPw7tx3FlE6w8ZgYMudlcYh+fxX4x4GdKplEvK4vT+Jp7w+ez7hI9m
+        +0W5HOc+s+clH7u1iK5660Nu0PNO2nS08aNDcEAcMvD8ASHYc9wBvsIQ33Hw
+        h39BNJ8QbD7B40+ll2RrUgQAAA==
+    http_version: !binary |-
+      MS4x
+  recorded_at: Fri, 09 Nov 2012 19:26:23 GMT
+recorded_with: VCR 2.3.0
