@@ -18,14 +18,11 @@ module Api
     end
 
     get "#{root}/:uid" do
-      user = CampusData.get_person_attributes(params[:uid])
-      if user.nil?
-        empty_response = ""
-      end
+      user = User.new(params[:uid])
+
       {
         :uid => params[:uid],
-        :first_name => empty_response || user["first_name"],
-        :last_name => empty_response || user["last_name"],
+        :preferred_name =>  user.preferred_name || "",
         :widget_data => {}
       }.to_json
     end
