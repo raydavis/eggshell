@@ -55,38 +55,38 @@ cd eggshell
 # Answer "yes" again if it asks you to trust a new .rvmrc file.
 ```
 
-6. Download the appropriate gems
+6. (Optional for development) Make JRuby faster & enable C extensions by running this or put in your .bashrc:
+```bash
+export JRUBY_OPTS="-Xcext.enabled=true -J-d32 -J-client -X-C"
+```
+
+7. Download the appropriate gems
 ```bash
 bundle install
 ```
 
-7. Configure the settings
-Copy
+8. Copy and update the settings
 ```
-/config/settings.yml => /config/settings.local.yml
-/config/testext.yml => /config/testext.local.yml
+cp config/settings.yml config/settings.local.yml
+cp config/settings/testext.yml config/settings/testext.local.yml
 ```
-and update the settings.
+and update the settings in the `.local.yml` files.
+These won't be committed to the repository.
 
-8. Install JDBC driver (for Oracle connection)
+9. Install JDBC driver (for Oracle connection)
   * Download [ojdbc6.jar](http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html)
   * Copy ojdbc6.jar to eggshell/lib
 
-9. Start the server
+10. Start the server
 ```bash
 rails s
-```
-
-10. (Optional for development) Make JRuby faster & enable C extensions by running this or put in your .bashrc:
-```bash
-export JRUBY_OPTS="-Xcext.enabled=true -J-d32 -J-client -X-C"
 ```
 
 ## LiveReload & Testing
 
 See code changes happening live in the browser and look at the testing
 
-- Run `foreman start` in the terminal, it will:
+Run `foreman start` in the terminal, it will:
 * Start the rails server
 * Expose the [jasmine](http://pivotal.github.com/jasmine/) tests at http://localhost:8888
 * Start [Guard](https://github.com/guard/guard) for livereload.
