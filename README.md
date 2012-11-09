@@ -4,23 +4,11 @@ The pre-release of CalCentral
 
 ## Dependencies
 
-* [JRuby 1.7.0](http://jruby.org/)
-* [Rubygems](http://rubyforge.org/frs/?group_id=126)
-* [Rails 3.2.8](http://rubyonrails.org/download)
 * [Bundler](http://gembundler.com/rails3.html)
+* [JRuby 1.7.0](http://jruby.org/)
+* [Rails 3.2.8](http://rubyonrails.org/download)
+* [Rubygems](http://rubyforge.org/frs/?group_id=126)
 * [Rvm](https://rvm.io/rvm/install/) - Ruby version managers
-
-## Bash Configuration (for developers):
-
-Some of the development gems we use require C-extensions, as we well as other performance enhancements that will make development sane.
-
-```bash
-export JRUBY_OPTS="-Xcext.enabled=true -J-d32 -J-client -X-C"
-```
-* Enable C-extensions: required for development installs that uses the postix-spawn gem
-* 32-bit java/jruby to for a somewhat more responsive development environment.
-* JVM in client mode: (same as above)
-
 
 ## Installation
 
@@ -55,7 +43,7 @@ git clone git@github.com:[your_github_acct]/eggshell.git
 4. Go inside the `eggshell` repository
 ```bash
 cd eggshell
-  -- Answer "yes" if it asks you to trust a new .rvmrc file.
+# Answer "yes" if it asks you to trust a new .rvmrc file.
 ```
 
 5. Install jruby
@@ -64,7 +52,7 @@ rvm get head
 rvm install jruby-1.7.0
 cd ..
 cd eggshell
-  -- Answer "yes" again if it asks you to trust a new .rvmrc file.
+# Answer "yes" again if it asks you to trust a new .rvmrc file.
 ```
 
 6. Download the appropriate gems
@@ -72,25 +60,24 @@ cd eggshell
 bundle install
 ```
 
-7. Enable CAS
-Copy and paste the contents of `/config/settings.yml` to `/config/settings/development.local.yml` and update the settings.
-
-
-(slip piece in here about yaml file settings)
-
-
+7. Configure the settings
+Copy
+```
+/config/settings.yml => /config/settings.local.yml
+/config/testext.yml => /config/testext.local.yml
+```
+and update the settings.
 
 8. Install JDBC driver (for Oracle connection)
-
-* Download ojdbc6.jar from http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html
-* Copy ojdbc6.jar to eggshell/lib
+  * Download [ojdbc6.jar](http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html)
+  * Copy ojdbc6.jar to eggshell/lib
 
 9. Start the server
 ```bash
 rails s
 ```
 
-10. Optional: Make JRuby faster. Run this or put in your .bashrc:
+10. (Optional for development) Make JRuby faster & enable C extensions by running this or put in your .bashrc:
 ```bash
 export JRUBY_OPTS="-Xcext.enabled=true -J-d32 -J-client -X-C"
 ```
@@ -99,9 +86,10 @@ export JRUBY_OPTS="-Xcext.enabled=true -J-d32 -J-client -X-C"
 
 See code changes happening live in the browser and look at the testing
 
-- Run `foreman start` in the terminal, it will run the rails server, expose the test and guard. [Read more about foreman](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html)
-
-- When you want to see the actual tests, go to http://localhost:8888/
+- Run `foreman start` in the terminal, it will:
+* Start the rails server
+* Expose the [jasmine](http://pivotal.github.com/jasmine/) tests at http://localhost:8888
+* Start [Guard](https://github.com/guard/guard) for livereload.
 
 ## Debugging
 
@@ -129,6 +117,20 @@ rm public/index.html
 # remove other pages ...
 ```
 
+### Test connection
+
+Make sure you are on the Berkeley network or connected through [VPN](https://kb.berkeley.edu/jivekb/entry.jspa?externalID=2665) for the oracle connection.
+If you use VPN, set the `connect to` to `ucbvpn-2-external.Berkeley.EDU` and use group #1 (campus_vpn split tunnel)
+
+### Tips
+
+1. On Mac OS X, to get RubyMine to pick up the necessary environment variables, open a new shell, set the environment variables, and:
+```bash
+/Applications/RubyMine.app/Contents/MacOS/rubymine &
+```
+
+2. If you want to explore the oracle database on Mac OS X, use [SQL Developer](http://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html)
+
 ### Styleguide
 
 * Use an editor that supports [.editorconfig](http://editorconfig.org/#overview). Feel free to have a look at the [editor plug-ins](http://editorconfig.org/#download)
@@ -146,22 +148,15 @@ rm public/index.html
 ```
 
 ## API Endpoints:
-_(Not meant to be thorough at this point)_
 
-- __/api/user__:
-  - __logged_in__: true/false boolean
-  - __uid__: (if logged in, uid string)
-
-- __/api/user/{uid}__: Eventually return something useful (name, profile information)
-  - __uid__: <uid string>
-  - __widget_data__: <JSONObject>
-
-* And test:
-```bash
-rspec spec/lib/campus_data_spec.rb
 ```
+/api/user:
+  logged_in: true/false boolean
+  uid: (if logged in, uid string)
 
-On Mac OS X, to get RubyMine to pick up the necessary environment variables, open a new shell, set the environment variables, and:
-```bash
-/Applications/RubyMine.app/Contents/MacOS/rubymine &
+/api/user/{uid}: Eventually return something useful (name, profile information)
+  first_name: <string if exists else "">
+  last_name: <string if exists else "">
+  uid: <uid string>
+  widget_data: <JSONObject>
 ```
