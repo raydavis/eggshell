@@ -3,6 +3,7 @@ module Api
   VCR.configure do |c|
     c.cassette_library_dir = 'fixtures/fakeable_proxy_data'
     c.hook_into :fakeweb
+    c.allow_http_connections_when_no_cassette = true
     c.debug_logger = File.open(Rails.root.join("log", "vcr-debug.log"), 'w')
   end
 
