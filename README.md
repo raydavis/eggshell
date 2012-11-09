@@ -4,11 +4,23 @@ The pre-release of CalCentral
 
 ## Dependencies
 
-* [Ruby 1.9.3-p286](http://www.ruby-lang.org/en/)
+* [JRuby 1.7.0](http://jruby.org/)
 * [Rubygems](http://rubyforge.org/frs/?group_id=126)
 * [Rails 3.2.8](http://rubyonrails.org/download)
 * [Bundler](http://gembundler.com/rails3.html)
 * [Rvm](https://rvm.io/rvm/install/) - Ruby version managers
+
+## Bash Configuration (for developers):
+
+Some of the development gems we use require C-extensions, as we well as other performance enhancements that will make development sane.
+
+```bash
+export JRUBY_OPTS="-Xcext.enabled=true -J-d32 -J-client -X-C"
+```
+* Enable C-extensions: required for development installs that uses the postix-spawn gem
+* 32-bit java/jruby to for a somewhat more responsive development environment.
+* JVM in client mode: (same as above)
+
 
 ## Installation
 
@@ -31,8 +43,8 @@ create user eggshell_production with password 'secret';
 grant all privileges on database eggshell_production to eggshell_production;
 create database eggshell_test;
 create user postgres;
-grant all privileges on database eggshell_test to postgres;
-alter role postgres with createdb;  # DEVELOPER MACHINES ONLY
+ALTER DATABASE eggshell_test OWNER TO postgres; # DEVELOPER MACHINES ONLY
+grant all privileges on database eggshell_test to postgres; # DEVELOPER MACHINES ONLY
 ```
 
 3. Fork this repository, then:
@@ -61,21 +73,17 @@ bundle install
 ```
 
 7. Enable CAS
-Copy and paste the contents of `/config/settings.yml` to `/config/environments/development.local.yml` and update the settings.
+Copy and paste the contents of `/config/settings.yml` to `/config/settings/development.local.yml` and update the settings.
+
+
+(slip piece in here about yaml file settings)
+
+
 
 8. Install JDBC driver (for Oracle connection)
 
 * Download ojdbc6.jar from http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html
 * Copy ojdbc6.jar to eggshell/lib
-
-If you have permission to connect to campusdb_development, set the secret variables (note the SINGLE quotes):
-
-```bash
-export ORACLE_USER='yer_username'
-export ORACLE_PASSWORD='yer_password'
-export ORACLE_DATABASE='yer_host:yer_port/yer_sid.berkeley.edu'
-```
-
 
 9. Start the server
 ```bash
@@ -134,20 +142,7 @@ rm public/index.html
 :+1:
 ```html
 <div data-ng-view></div>
-<span ng-bind="name"></span>
-```
-
-### Segmentation fault
-
-```bash
-.../lib/sqlite3/sqlite3_native.bundle: [BUG] Segmentation fault
-```
-
-Fix it with running:
-
-```bash
-gem uninstall sqlite3
-gem install sqlite3
+<span data-ng-bind="name"></span>
 ```
 
 ## API Endpoints:
