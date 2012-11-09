@@ -4,8 +4,8 @@ http_interactions:
     method: get
     uri: https://ucberkeley.instructure.com/api/v1/courses
     body:
-      encoding: ASCII-8BIT
-      string: !binary ""
+      encoding: US-ASCII
+      string: ''
     headers:
       accept:
       - ! '*/*; q=0.5, application/xml'
@@ -32,10 +32,10 @@ http_interactions:
         YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
       !binary "ZGF0ZQ==":
       - !binary |-
-        RnJpLCAwOSBOb3YgMjAxMiAxOToyNjoyMyBHTVQ=
+        RnJpLCAwOSBOb3YgMjAxMiAyMzowNDoyNCBHTVQ=
       !binary "ZXRhZw==":
       - !binary |-
-        IjgwZWI3MjMzYTE0YWI4MmEzMGIyMDkxNmUwNzViODAxIg==
+        IjJiYmM0YmU0Y2E1ODA3YjlhMGJkMmYxMjRiNzVjMDhkIg==
       !binary "cDNw":
       - !binary |-
         Q1A9Ik5vbmUsIHNlZSBodHRwOi8vd3d3Lmluc3RydWN0dXJlLmNvbS9wcml2
@@ -45,10 +45,10 @@ http_interactions:
         QXBhY2hl
       !binary "c2V0LWNvb2tpZQ==":
       - !binary |-
-        Y2FudmFzX3Nlc3Npb249ZW9kSDFvOWxINmtuUnd4VUxsdnROUS5zakhwWFZX
-        NXJVUUMtQVVPSE5ZbXJYemsyc2dWcFFoOUlKNlJaek1uM0xYQk5qR2VQc0tr
-        MjhtRExaWUdLQzRJS1otSVpETDY0MU1yYkhhdG9FSERGQS5xaGhYc3ozTlV1
-        dDAzWExIQVpka3NYb0F3TVkuVUoxWTN3OyBwYXRoPS87IHNlY3VyZTsgSHR0
+        Y2FudmFzX3Nlc3Npb249cFMyeTBvcUp6Z0tsTDRlMGl6M2VBZy5rMzVPNENz
+        N1ZpSUpNX2xNeEdXRDhRb0x2bVRFUG5FR28xY09raHRGbHp0OXJqWm1VUmtV
+        d1A5aWNEYlNIVy1STG9lS2xvZEQwUjBCdDdWdjJwdHZiZy5YNmpSNHBGeWJi
+        YmJPQVFROTY0TTZiSS02WTQuVUoyTC1BOyBwYXRoPS87IHNlY3VyZTsgSHR0
         cE9ubHk=
       !binary "c3RhdHVz":
       - !binary |-
@@ -61,34 +61,34 @@ http_interactions:
         MTAwMDAwMDMwNzU5MTQ=
       !binary "eC1yZXF1ZXN0LWNvbnRleHQtaWQ=":
       - !binary |-
-        NDU1OTBmODAtMGNkMS0wMTMwLWVkY2UtMDJlMzNhYjRmZWJh
+        YmE0ZmU3NTAtMGNlZi0wMTMwLTljODgtMDJlMzNhOTlmYTlj
       !binary "eC1ydW50aW1l":
       - !binary |-
-        NjQz
+        MzYw
       !binary "eC11YS1jb21wYXRpYmxl":
       - !binary |-
         SUU9ZWRnZSxjaHJvbWU9MQ==
       !binary "Y29udGVudC1sZW5ndGg=":
       - !binary |-
-        NDY5
+        NDcx
       !binary "Y29ubmVjdGlvbg==":
       - !binary |-
         a2VlcC1hbGl2ZQ==
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAA7WTXW/aMBSG/wrydQA7CcmSu7QDBkQVAy5Gqypy7EMJdeIs
-        dgYp4r/PAXWqJlVD6yb5wn5tn4/ntR+OiDIm60InGUdhgG3XsZDKVGLESsFZ
-        LWohjKhppROqX9eMCig4rVB4RBlTKERbrUsV9vs1S6F6BgFNLyuUrmqm6wp6
-        TOb9DQBX/derZnbJsmRynH7ZPKmvwc0uHa/xPb+1RbOiOYFvy4M/ih02O2jo
-        tYlOFuKwobXQyY8M9iZxGxVZqKA5mNUlJjHCNuOQbLKCiuSpohxMkRsqFFio
-        bcv3Bo4dWAiKSgqRQ6HN/sMR6aZsw2igbAsVOj22R/jbzi9FM8nfpjtZf8MS
-        2ZjYXYK7+NOKeKHth8TtYj/EGP1bxLcvd9HsMNpO40jqJi8/72b+M5dDf18s
-        5mUTNTuy1lN3/w7iXPJaGIC/KC9AaVlRncmiE2cazNRUcA10H3vvQle65kY7
-        w/xd+oMPw7tx3FlE6w8ZgYMudlcYh+fxX4x4GdKplEvK4vT+Jp7w+ez7hI9m
-        +0W5HOc+s+clH7u1iK5660Nu0PNO2nS08aNDcEAcMvD8ASHYc9wBvsIQ33Hw
-        h39BNJ8QbD7B40+ll2RrUgQAAA==
+        H4sIAAAAAAAAA62SUW/aMBDHvwrycwA7CWTkLe0gA6KKAg+jVRUZ+1JCnTiL
+        nUGK+O5zypg09gJTJT/Y//P/7vzzPR8QZUxWuY5TjvwBtl3HQpCXUogMcq2Q
+        /3xAui4A+UgDZRso0fHFQipVsfGVCj6MeSVE4+Mx1edTo3v9nmMPLMSoMEFa
+        Iv+AUmayoo3WhfK73YqtoXwDAXUnzZUuK6arEjpMZt0EgKvu2Wp2p3oLJsP1
+        t+RVPQ7ututwhZ/4vS3qJc0IfF/svVHksOleQ6cpdLRQTrOm+5ObIAtxSGgl
+        dPwzhZ0JNGWM+js7k/zv25uUQ5ykORXxa0k5mOYTKhQYBpqW+s+Dj9YtLJWu
+        uNFQ47qUbsLr4f7n4r1/fwim+9FmEgVS11nxdTv13rgcert8PivqoN6SlZ64
+        uwu8c1BallSnMm9FqQazNYX+pZ1JXgkD8RL48CGMWvNgdSVxZGNitwlu4y9L
+        0vdtzyduG3s+xui2j/ivofYcB38u9fchnUi5oCxaP91FYz6b/hjz0XQ3LxZh
+        5jF7VvDQrURwQX3IDWreWtctbfi3CB4Qh/T6Xo8Q3HfcHr5y3IPZmOBrp/3E
+        Hg/a2F1i7H+sM/uXXxsTRlFSBAAA
     http_version: !binary |-
       MS4x
-  recorded_at: Fri, 09 Nov 2012 19:26:23 GMT
+  recorded_at: Fri, 09 Nov 2012 23:04:24 GMT
 recorded_with: VCR 2.3.0
