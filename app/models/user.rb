@@ -14,11 +14,10 @@ class User
     @override_name || @default_name
   end
   def preferred_name=(val)
-    if val
+    if val.blank?
+      val = nil
+    else
       val.strip!
-      if val.empty?
-        val = nil
-      end
     end
     @override_name = val
   end
@@ -32,6 +31,13 @@ class User
         @calcentral_user_data.update_attributes(preferred_name: @override_name)
       end
     end
+  end
+
+  def update_attributes(attributes)
+    if attributes.has_key?(:preferred_name)
+      self.preferred_name = attributes[:preferred_name]
+    end
+    save
   end
 
 end

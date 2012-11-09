@@ -19,17 +19,15 @@ describe "User" do
   end
   it "should override the default name" do
     u = User.new(@random_id)
-    u.preferred_name = "Herr Heyer"
-    u.save
+    u.update_attributes(preferred_name: "Herr Heyer")
     u = User.new(@random_id)
     u.preferred_name.should == "Herr Heyer"
   end
   it "should revert to the default name" do
     u = User.new(@random_id)
-    u.preferred_name = "Herr Heyer"
-    u.save
-    u.preferred_name = ""
-    u.save
+    u.update_attributes(preferred_name: "Herr Heyer")
+    u = User.new(@random_id)
+    u.update_attributes(preferred_name: "")
     u = User.new(@random_id)
     u.preferred_name.should == @default_name
   end
