@@ -5,7 +5,10 @@ The pre-release of CalCentral
 ## Dependencies
 
 * [Bundler](http://gembundler.com/rails3.html)
+* [Git](https://help.github.com/articles/set-up-git)
+* [JDBC Oracle driver](http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html)
 * [JRuby 1.7.0](http://jruby.org/)
+* [PostgreSQL](http://www.postgresql.org/)
 * [Rails 3.2.8](http://rubyonrails.org/download)
 * [Rubygems](http://rubyforge.org/frs/?group_id=126)
 * [Rvm](https://rvm.io/rvm/install/) - Ruby version managers
@@ -64,7 +67,7 @@ export JRUBY_OPTS="-Xcext.enabled=true -J-d32 -J-client -X-C"
      * (set your JRUBY_OPTS)
      * ```bundle install```
 
-7. Download the appropriate gems
+7. Download the appropriate gems with [Bundler](http://gembundler.com/rails3.html)
 ```bash
 bundle install
 ```
