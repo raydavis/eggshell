@@ -164,3 +164,14 @@ If you use VPN, set the `connect to` to `ucbvpn-2-external.Berkeley.EDU` and use
   preferredName: <string if exists else "">
   uid: <uid string>
 ```
+
+## Freshening fake data feeds
+
+Make sure your test.local.yml file has real connections to real external services that are fakeable (Canvas, Google, etc).
+Now do:
+
+```bash
+rake spec freshen_vcr=true
+git add fixtures/fakeable_proxy_data
+git commit -a -m "Helpful commit message"
+```

@@ -36,6 +36,11 @@ gem "sinatra", "~> 1.3.3"
 # https://rubygems.org/gems/rest-client
 gem "rest-client", "~> 1.6.7"
 
+# for VCR http recording tool
+gem "vcr", "~> 2.3.0"
+gem "fakeweb", "~> 1.3.0"
+gem "jruby-openssl", "~> 0.7.7"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
