@@ -1,11 +1,10 @@
 module Eggshell
 
   class PopulateCampusH2 < ActiveRecord::Base
-
-    if %w(development test).include?(ENV['RAILS_ENV'])
-      Rails.application.config.after_initialize do
+    Rails.application.config.after_initialize do
+      p Settings.campusdb
+      if Settings.campusdb.adapter == "jdbch2"
         establish_connection "campusdb"
-
         sql = <<-SQL
 
         DROP TABLE IF EXISTS BSPACE_CLASS_ROSTER_VW;
@@ -1005,7 +1004,6 @@ module Eggshell
         SQL
 
         connection.execute sql
-
       end
     end
   end
