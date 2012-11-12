@@ -1,6 +1,6 @@
 class CampusData < ActiveRecord::Base
   establish_connection "campusdb"
-  p "CampusData is using #{Settings.campusdb.url} as datasource+target"
+  puts "CampusData is using #{Settings.campusdb.url} as datasource+target"
 
   def self.get_person_attributes(person_id)
     sql = <<-SQL

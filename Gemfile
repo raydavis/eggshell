@@ -95,3 +95,8 @@ group :development do
   # https://github.com/rtomayko/posix-spawn
   gem "posix-spawn", "~> 0.3.6"
 end
+
+group :test do
+  gem 'sqlite3', '~> 1.3.6'
+  gem 'activerecord-jdbcsqlite3-adapter'
+end

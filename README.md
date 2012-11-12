@@ -33,9 +33,7 @@ create database eggshell_production;
 create user eggshell_production with password 'secret';
 grant all privileges on database eggshell_production to eggshell_production;
 create database eggshell_test;
-create user postgres;
-ALTER DATABASE eggshell_test OWNER TO postgres; # DEVELOPER MACHINES ONLY
-grant all privileges on database eggshell_test to postgres; # DEVELOPER MACHINES ONLY
+create user postgres superuser with password 'secret';
 ```
 
 3. Fork this repository, then:
@@ -81,10 +79,17 @@ and update the settings in the `.local.yml` files.
 These won't be committed to the repository.
 
 9. Install JDBC driver (for Oracle connection)
-  * Download [ojdbc6.jar](http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html)
-  * Copy ojdbc6.jar to eggshell/lib
+You may already have an Oracle driver from MyBerkeley-OAE development, in which case you just need to copy it to your local JRuby installation:
+```cp ~/.m2/repository/com/oracle/ojdbc6/11.2.0.3/ojdbc6-11.2.0.3.jar ~/.rvm/rubies/jruby-1.7.0/lib/```
+  * Otherwise, download [ojdbc6.jar](http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html)
+  * Copy ojdbc6.jar to your local JRuby installation; e.g. ```~/.rvm/rubies/jruby-1.7.0/lib/```
 
-10. Start the server
+10. Initialize PostgreSQL database tables
+```bash
+rake db:schema:load
+```
+
+11. Start the server
 ```bash
 rails s
 ```
