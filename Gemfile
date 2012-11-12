@@ -97,6 +97,5 @@ group :development do
 end
 
 group :test do
-  gem 'sqlite3', '~> 1.3.6'
-  gem 'activerecord-jdbcsqlite3-adapter'
+  gem "activerecord-jdbcsqlite3-adapter", "~> 1.2.2.1"
 end
