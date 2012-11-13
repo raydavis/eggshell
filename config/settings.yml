@@ -9,9 +9,12 @@ campusdb:
   url: jdbc:h2:mem:h2CampusDataSource;DB_CLOSE_DELAY=-1;MODE=Oracle
   username: sa
   password: sa
+
 postgres:
   database: eggshell_production
   username: eggshell_production
   password: secret
   host: localhost
   port: 5432
+
+freshen_vcr: <%= ENV['freshen_vcr'] %>
