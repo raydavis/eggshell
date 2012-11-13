@@ -5,10 +5,10 @@ module Api
     c.hook_into :fakeweb
     c.allow_http_connections_when_no_cassette = true
     c.debug_logger = File.open(Rails.root.join("log", "vcr-debug.log"), 'w')
-    c.before_record do |i|
+    c.after_http_request do |request,response|
       # so we don't record sensitive auth headers
-      i.response.headers['authorization'] = ''
-      i.request.headers['authorization'] = ''
+      response.headers['authorization'] = ''
+      request.headers['authorization'] = ''
     end
   end
 
@@ -16,6 +16,14 @@ module Api
 
     def fake
       false
+    end
+
+    def do_get(request_id, url, headers = {}, force_fake = nil)
+      make_request(request_id, force_fake) do
+        RestClient.get(url, {
+            :accept_encoding => ''
+        }.merge!(headers))
+      end
     end
 
     def make_request(request_id, force_fake = nil, &block)
