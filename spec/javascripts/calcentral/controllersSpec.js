@@ -1,11 +1,13 @@
 describe('CalCentral controllers', function() {
 
+  // Initialize the CalCentral module
+  // Usually we can do this within the HTML but here we need to initialize it manually
   beforeEach(module('calcentral'));
 
   describe('Dashboard controller', function() {
 
-    var rootScope;
     var ctrl;
+    var rootScope;
 
     beforeEach(inject(function($rootScope, $controller) {
       rootScope = $rootScope.$new();
@@ -15,12 +17,50 @@ describe('CalCentral controllers', function() {
       });
     }));
 
-    it("should have a defined dashboard controller", function() {
+    it('should have a defined dashboard controller', function() {
       expect(ctrl).toBeDefined();
     });
 
-    it("should set the page title", function() {
+    it('should set the page title', function() {
       expect(rootScope.title).toBe('Dashboard | Calcentral');
+    });
+
+  });
+
+  describe('User controller', function() {
+
+    var $httpBackend;
+    var ctrl;
+    var scope;
+
+    beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
+      // Inject the HTTP Back-end
+      $httpBackend = _$httpBackend_;
+      $httpBackend.expectGET('/api/user/status').
+        respond([{
+          'isLoggedIn': false
+        }]);
+
+      scope = $rootScope.$new();
+
+      ctrl = $controller('UserController', {
+        $scope: scope
+      });
+    }));
+
+    afterEach(function() {
+      $httpBackend.verifyNoOutstandingExpectation();
+      $httpBackend.verifyNoOutstandingRequest();
+    });
+
+    it('should have a defined user controller', function() {
+      expect(ctrl).toBeDefined();
+      $httpBackend.flush();
+    });
+
+    it('should make sure that the user is logged out', function() {
+      expect(scope.user.isLoggedIn).toBeFalsy();
+      $httpBackend.flush();
     });
 
   });
