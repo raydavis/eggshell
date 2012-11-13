@@ -14,7 +14,7 @@ module Api
     end
 
     def make_request(request_id, force_fake = nil, &block)
-      if fake || force_fake || ENV['freshen_vcr']
+      if fake || force_fake || Settings.freshen_vcr
         p "Using VCR to wrap request id #{request_id}"
         VCR.use_cassette(request_id, :allow_playback_repeats => true, :match_requests_on => [:method, :path]) do
           block.call
