@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     auth = request.env["omniauth.auth"]
     #do something useful with the uid eventually, like check oracle
     session[:user_id] = auth['uid']
-    redirect_to dashboard_url, :notice => "Signed in!"
+    redirect_to '/dashboard', :notice => "Signed in!"
   end
 
   def destroy
