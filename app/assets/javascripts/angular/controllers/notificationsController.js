@@ -9,7 +9,7 @@
 
     $http.get('/dummy/notifications.json').success(function(data) {
 
-      $scope.notifications = data.notifications;
+      $scope.notifications = data;
 
     });
 
