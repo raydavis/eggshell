@@ -56,13 +56,11 @@ Eggshell::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
   root :to => 'bootstrap#index'
 
-  # Sinatra API endpoints.
-  match '/fake/api/canvas/*url' => Api::Canvas
-  match '/api/canvas/*url' => Api::Canvas
-
   # Rails API endpoints.
   match '/api/user/status' => 'user_api#status'
   match '/api/user/:uid' => 'user_api#show'
+  match '/:fake/api/canvas/mycourses' => 'canvas_api#mycourses'
+  match '/api/canvas/mycourses' => 'canvas_api#mycourses'
 
   match '/auth/cas/callback' => 'sessions#lookup'
   match '/auth/failure' => 'sessions#failure'
