@@ -40,6 +40,7 @@ class UserApiController < ApplicationController
     "user_#{uid}"
   end
 
+  # TODO expire is not yet used, but should be called from any code that saves a user
   def expire(uid)
     expire_action(:controller => 'user_api', :action => 'show', :uid => uid)
     Rails.cache.delete(cache_key(uid), :force => true)
