@@ -23,7 +23,6 @@
         "sourceUrl": "https://bearfacts.berkeley.edu/"
       }
     ],
-
     "Today": [
       {
         "id": 3,
@@ -59,7 +58,6 @@
         "sourceUrl": false
       }
     ],
-
     "Recent": [
       {
         "id": 6,
@@ -94,7 +92,5 @@
         "url": "http://example.com",
         "sourceUrl": false
       }
-
     ]
-
 }

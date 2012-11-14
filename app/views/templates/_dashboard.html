@@ -265,8 +265,7 @@
     <div class="cc-notifications-list">
       <div class="cc-widget-body" data-ng-repeat="(key,section) in notifications">
       <div ng-switch on="key">
-        <div class="cc-widget-section-label" data-ng-switch-when="Today">{{key}}</div>
-        <div class="cc-widget-section-label" data-ng-switch-when="Recent">{{key}}</div>
+        <div class="cc-widget-section-label" data-ng-hide="key == 'Alerts'">{{key}}</div>
       </div>
           <ul class="cc-widget-notifications-list cc-widget-section-list">
             <li data-ng-repeat="notification in section | orderBy: 'notificationDate'" class="cc-widget-list-icon-big cc-icon-big-{{notification.type}}">
