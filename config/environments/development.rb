@@ -12,9 +12,8 @@ Eggshell::Application.configure do
   # Log error messages when you accidentally call methods on nil.
   config.whiny_nils = true
 
-  # Show full error reports and disable caching
+  # Show full error reports and enable caching
   config.consider_all_requests_local       = true
-  config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
@@ -37,4 +36,10 @@ Eggshell::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Caching store
+  config.cache_store = ActiveSupport::Cache.lookup_store(:null_store)
+  config.cache_store.logger = Logger.new("#{Rails.root}/log/#{Rails.env}.log")
+  config.cache_store.logger.level = Logger::DEBUG
+
 end

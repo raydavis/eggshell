@@ -16,7 +16,6 @@ Eggshell::Application.configure do
 
   # Show full error reports and disable caching
   config.consider_all_requests_local       = true
-  config.action_controller.perform_caching = false
 
   # Raise exceptions instead of rendering exception templates
   config.action_dispatch.show_exceptions = false
@@ -34,4 +33,10 @@ Eggshell::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  # Caching store
+  config.cache_store = ActiveSupport::Cache.lookup_store(:null_store)
+  config.cache_store.logger = Logger.new("#{Rails.root}/log/#{Rails.env}.log")
+  config.cache_store.logger.level = Logger::DEBUG
+
 end

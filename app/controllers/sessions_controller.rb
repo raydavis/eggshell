@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    expire_action(:controller => 'user_api', :action => 'show', :uid => session[:user_id])
     reset_session
     redirect_to "#{Settings.cas_logout_url}?url=#{CGI.escape(request.protocol + request.host_with_port)}"
   end
