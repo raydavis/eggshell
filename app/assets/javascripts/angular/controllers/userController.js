@@ -18,7 +18,7 @@
     };
 
     $scope.signIn = function() {
-      window.location = '/dashboard';
+      window.location = '/login';
     };
 
   }]);
