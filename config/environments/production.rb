@@ -6,7 +6,6 @@ Eggshell::Application.configure do
 
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
-  config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
   config.serve_static_assets = false
@@ -62,11 +61,9 @@ Eggshell::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  # Caching stores (choose one)
-  config.cache_store = ActiveSupport::Cache.lookup_store(:mem_cache_store, "localhost")
-  #config.cache_store = ActiveSupport::Cache.lookup_store(:memory_store, :size => 32.megabytes)
-  #config.cache_store = ActiveSupport::Cache.lookup_store(:null_store)
-  config.cache_store.logger = Logger.new("#{Rails.root}/log/#{Rails.env}-cache.log")
+  # Caching store
+  config.cache_store = ActiveSupport::Cache.lookup_store(:dalli_store, "localhost")
+  config.cache_store.logger = Logger.new("#{Rails.root}/log/#{Rails.env}.log")
   config.cache_store.logger.level = Logger::INFO
 
 end
