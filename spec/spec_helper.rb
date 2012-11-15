@@ -6,6 +6,7 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
+require 'capybara/rspec'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -47,4 +48,11 @@ RSpec.configure do |config|
   unless ENV["RAILS_ENV"] == 'testext'
     config.filter_run_excluding :testext => true
   end
+
+  # Include Auth helper:
+  config.include IntegrationSpecHelper, :type => :request
 end
+
+Capybara.default_host = 'http://localhost:3000'
+
+OmniAuth.config.test_mode = true

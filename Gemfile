@@ -68,6 +68,11 @@ group :development, :test , :testext do
   # Code coverage for Ruby 1.9 with a powerful configuration library and automatic merging of coverage across test suites
   # https://rubygems.org/gems/simplecov
   gem "simplecov", "~> 0.7.1", :require => false
+
+  # Capybara is an integration testing tool for rack based web applications.
+  # It simulates how a user would interact with a website
+  # https://rubygems.org/gems/capybara
+  gem "capybara", "~> 1.1.3"
 end
 
 group :development do

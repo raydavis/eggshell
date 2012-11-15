@@ -2,6 +2,10 @@ class CanvasApiController < ApplicationController
   include Fakeable_Proxy
 
   def mycourses
+    unless (params[:fake] == 'fake')
+      authenticate
+    end
+
     puts "in CanvasApiController mycourses"
     p params
 
