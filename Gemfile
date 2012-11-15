@@ -67,6 +67,7 @@ group :development, :test , :testext do
   # Test our JavaScript code.
   # https://github.com/pivotal/jasmine-gem
   gem "jasmine", "~> 1.2.1"
+  gem "therubyrhino", "~> 2.0.1"
 
   # Code coverage for Ruby 1.9 with a powerful configuration library and automatic merging of coverage across test suites
   # https://rubygems.org/gems/simplecov
