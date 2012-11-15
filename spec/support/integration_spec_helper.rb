@@ -6,7 +6,7 @@ module IntegrationSpecHelper
         {
           :provider => 'cas',
           :uid => user
-        })
+        }.stringify_keys!)
     end
     visit "/login"
   end
